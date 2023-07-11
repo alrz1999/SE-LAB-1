@@ -3,7 +3,7 @@ class Calculator:
     class Operation(Enum):
         Add = 1,
         Subtract = 2,
-        multiply = 3,
+        Multiply = 3,
         Divide = 4
 
     @staticmethod

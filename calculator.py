@@ -18,6 +18,7 @@ class Calculator:
             print("Result:", Calculator.divide(x, y))
         else:
             print("Invalid choice")
+            raise AttributeError
 
     @staticmethod
     def add(x, y):

@@ -26,7 +26,7 @@ class Calculator:
 
     @staticmethod
     def subtract(x, y):
-        return y - x
+        return x - y
 
     @staticmethod
     def multiply(x, y):

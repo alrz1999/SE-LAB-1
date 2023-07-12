@@ -1,10 +1,13 @@
 from enum import Enum
+import math
+
 class Calculator:
     class Operation(Enum):
         Add = 1,
         Subtract = 2,
         Multiply = 3,
-        Divide = 4
+        Divide = 4,
+        Power = 5
 
     @staticmethod
     def calculate(x, operation, y):
@@ -16,6 +19,8 @@ class Calculator:
             print("Result:", Calculator.multiply(x, y))
         elif operation == "Divide":
             print("Result:", Calculator.divide(x, y))
+        elif operation == "Power":
+            print("Result:", Calculator.power(x, y))
         else:
             print("Invalid choice")
             raise AttributeError
@@ -36,14 +41,18 @@ class Calculator:
     def divide(x, y):
         pass
 
+    @staticmethod
+    def power(x, y):
+        return math.pow(x, y)
+
 def get_input_operation():
-    operations = ["Add", "Subtract", "Multiply", "Divide"]
+    operations = ["Add", "Subtract", "Multiply", "Divide", "Power"]
 
     print("Select operation:")
     for idx, operation in enumerate(operations):
         print(f"{idx+1}. {operation}")
 
-    operation_index = int(input("Enter your choice (1/2/3/4): "))
+    operation_index = int(input("Enter your choice (1/2/3/4/5): "))
     return operations[operation_index-1]
 
 def get_input_numbers():

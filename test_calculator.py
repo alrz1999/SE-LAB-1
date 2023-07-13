@@ -31,7 +31,11 @@ class CalculatorTest(unittest.TestCase):
     def test_sqrt(self):
         result = Calculator.sqrt(16)
         self.assertEqual(result, 4)
-
+    
+     def test_log(self):
+        result = Calculator.log(1000000)
+        self.assertEqual(result, 6)
+        
     def test_invalid_operation(self):
         with self.assertRaises(AttributeError):
             Calculator.calculate(2, "InvalidOperation", 3)

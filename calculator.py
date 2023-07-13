@@ -25,6 +25,8 @@ class Calculator:
             print("Result:", Calculator.power(x, y))
         elif operation == "Sqrt":
             print("Result:", Calculator.sqrt(x))
+        elif operation == "Log":
+            print("Result:", Calculator.log(x,y))
         else:
             print("Invalid choice")
             raise AttributeError

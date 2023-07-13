@@ -8,6 +8,10 @@ class CalculatorTest(unittest.TestCase):
         Subtract = 2
         Multiply = 3
         Divide = 4
+        Sqrt = 5
+        Log = 6
+        Sin = 7
+        Cos = 8
 
     def test_add(self):
         result = Calculator.add(2, 3)

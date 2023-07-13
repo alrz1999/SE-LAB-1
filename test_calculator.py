@@ -35,6 +35,12 @@ class CalculatorTest(unittest.TestCase):
      def test_log(self):
         result = Calculator.log(1000000)
         self.assertEqual(result, 6)
+    def test_sin(self):
+        result = Calculator.sin(0)
+        self.assertEqual(result, 0)
+    def test_cos(self):
+        result = Calculator.cos(0)
+        self.assertEqual(result, 1)
         
     def test_invalid_operation(self):
         with self.assertRaises(AttributeError):

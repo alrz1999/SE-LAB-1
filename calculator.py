@@ -9,6 +9,7 @@ class Calculator:
         Divide = 4,
         Power = 5
         Sqrt = 6
+        log  =7
 
     @staticmethod
     def calculate(x, operation, y):

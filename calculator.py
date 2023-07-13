@@ -7,9 +7,10 @@ class Calculator:
         Subtract = 2,
         Multiply = 3,
         Divide = 4,
-        Power = 5
-        Sqrt = 6
-        log  =7
+        Power = 5,
+        Sqrt = 6,
+        log  =7,
+        sin  =8
 
     @staticmethod
     def calculate(x, operation, y):
@@ -27,6 +28,8 @@ class Calculator:
             print("Result:", Calculator.sqrt(x))
         elif operation == "Log":
             print("Result:", Calculator.log(x))
+        elif operation == "Sin":
+            print("Result:", Calculator.sin(x))    
         else:
             print("Invalid choice")
             raise AttributeError

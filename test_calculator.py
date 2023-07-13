@@ -28,6 +28,9 @@ class CalculatorTest(unittest.TestCase):
     def test_divide(self):
         result = Calculator.divide(6, 2)
         self.assertEqual(result, 3)
+    def test_sqrt(self):
+        result = Calculator.sqrt(16)
+        self.assertEqual(result, 4)
 
     def test_invalid_operation(self):
         with self.assertRaises(AttributeError):

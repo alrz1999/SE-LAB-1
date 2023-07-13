@@ -67,16 +67,18 @@ class Calculator:
     @staticmethod
     def sin(x):
         return math.sin(x)
-    
+    @staticmethod
+    def cos(x):
+        return math.cos(x)
 
 def get_input_operation():
-    operations = ["Add", "Subtract", "Multiply", "Divide", "Power", "Sqrt","log","sin"]
+    operations = ["Add", "Subtract", "Multiply", "Divide", "Power", "Sqrt","log","sin","cos"]
 
     print("Select operation:")
     for idx, operation in enumerate(operations):
         print(f"{idx+1}. {operation}")
 
-    operation_index = int(input("Enter your choice (1/2/3/4/5/6/7/8): "))
+    operation_index = int(input("Enter your choice (1/2/3/4/5/6/7/8/9): "))
     return operations[operation_index-1]
 
 def get_input_numbers(operation):
@@ -89,6 +91,9 @@ def get_input_numbers(operation):
     elif operation == "sin":
         num = float(input("Enter number: "))
         return num, None
+     elif operation == "cos":
+        num = float(input("Enter number: "))
+        return num, None   
     else:        
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))

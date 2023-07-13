@@ -9,8 +9,8 @@ class Calculator:
         Divide = 4,
         Power = 5,
         Sqrt = 6,
-        log  =7,
-        sin  =8
+        log  = 7,
+        sin  = 8
 
     @staticmethod
     def calculate(x, operation, y):
@@ -61,15 +61,18 @@ class Calculator:
     @staticmethod
     def log(x):
         return math.log10(x)
+    @staticmethod
+    def sin(x):
+        return math.sin(x)
 
 def get_input_operation():
-    operations = ["Add", "Subtract", "Multiply", "Divide", "Power", "Sqrt","log"]
+    operations = ["Add", "Subtract", "Multiply", "Divide", "Power", "Sqrt","log","sin"]
 
     print("Select operation:")
     for idx, operation in enumerate(operations):
         print(f"{idx+1}. {operation}")
 
-    operation_index = int(input("Enter your choice (1/2/3/4/5/6/7): "))
+    operation_index = int(input("Enter your choice (1/2/3/4/5/6/7/8): "))
     return operations[operation_index-1]
 
 def get_input_numbers(operation):
@@ -77,6 +80,9 @@ def get_input_numbers(operation):
         num = float(input("Enter number: "))
         return num, None
     elif operation == "log":
+        num = float(input("Enter number: "))
+        return num, None
+    elif operation == "sin":
         num = float(input("Enter number: "))
         return num, None
     else:        

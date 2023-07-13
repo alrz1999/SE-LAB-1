@@ -55,6 +55,9 @@ class Calculator:
     @staticmethod
     def sqrt(x):
         return math.sqrt(x)
+    @staticmethod
+    def log(x):
+        return math.log10(x)
 
 def get_input_operation():
     operations = ["Add", "Subtract", "Multiply", "Divide", "Power", "Sqrt","log"]
@@ -68,6 +71,9 @@ def get_input_operation():
 
 def get_input_numbers(operation):
     if operation == "Sqrt":
+        num = float(input("Enter number: "))
+        return num, None
+    elif operation == "log":
         num = float(input("Enter number: "))
         return num, None
     else:        

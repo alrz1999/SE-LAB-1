@@ -25,6 +25,8 @@ class Calculator:
             print("Result:", Calculator.power(x, y))
         elif operation == "Sqrt":
             print("Result:", Calculator.sqrt(x))
+        elif operation == "Log":
+            print("Result:", Calculator.log(x))
         else:
             print("Invalid choice")
             raise AttributeError
@@ -53,19 +55,25 @@ class Calculator:
     @staticmethod
     def sqrt(x):
         return math.sqrt(x)
+    @staticmethod
+    def log(x):
+        return math.log10(x)
 
 def get_input_operation():
-    operations = ["Add", "Subtract", "Multiply", "Divide", "Power", "Sqrt"]
+    operations = ["Add", "Subtract", "Multiply", "Divide", "Power", "Sqrt","log"]
 
     print("Select operation:")
     for idx, operation in enumerate(operations):
         print(f"{idx+1}. {operation}")
 
-    operation_index = int(input("Enter your choice (1/2/3/4/5/6): "))
+    operation_index = int(input("Enter your choice (1/2/3/4/5/6/7): "))
     return operations[operation_index-1]
 
 def get_input_numbers(operation):
     if operation == "Sqrt":
+        num = float(input("Enter number: "))
+        return num, None
+    elif operation == "log":
         num = float(input("Enter number: "))
         return num, None
     else:        

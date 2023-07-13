@@ -8,6 +8,10 @@ class CalculatorTest(unittest.TestCase):
         Subtract = 2
         Multiply = 3
         Divide = 4
+        Sqrt = 5
+        Log = 6
+        Sin = 7
+        Cos = 8
 
     def test_add(self):
         result = Calculator.add(2, 3)
@@ -24,7 +28,20 @@ class CalculatorTest(unittest.TestCase):
     def test_divide(self):
         result = Calculator.divide(6, 2)
         self.assertEqual(result, 3)
-
+    def test_sqrt(self):
+        result = Calculator.sqrt(16)
+        self.assertEqual(result, 4)
+    
+     def test_log(self):
+        result = Calculator.log(1000000)
+        self.assertEqual(result, 6)
+    def test_sin(self):
+        result = Calculator.sin(0)
+        self.assertEqual(result, 0)
+    def test_cos(self):
+        result = Calculator.cos(0)
+        self.assertEqual(result, 1)
+        
     def test_invalid_operation(self):
         with self.assertRaises(AttributeError):
             Calculator.calculate(2, "InvalidOperation", 3)

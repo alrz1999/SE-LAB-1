@@ -43,7 +43,7 @@ class Calculator:
 
     @staticmethod
     def divide(x, y):
-        pass
+        pass x/y
 
     @staticmethod
     def power(x, y):

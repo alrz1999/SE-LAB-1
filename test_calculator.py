@@ -32,7 +32,7 @@ class CalculatorTest(unittest.TestCase):
         result = Calculator.sqrt(16)
         self.assertEqual(result, 4)
     
-     def test_log(self):
+    def test_log(self):
         result = Calculator.log(1000000)
         self.assertEqual(result, 6)
     def test_sin(self):

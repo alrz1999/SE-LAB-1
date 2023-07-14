@@ -48,11 +48,11 @@ class Calculator:
 
     @staticmethod
     def multiply(x, y):
-        pass x*y
+        return x*y
 
     @staticmethod
     def divide(x, y):
-        pass x/y
+        return x/y
 
     @staticmethod
     def power(x, y):
@@ -91,7 +91,7 @@ def get_input_numbers(operation):
     elif operation == "sin":
         num = float(input("Enter number: "))
         return num, None
-     elif operation == "cos":
+    elif operation == "cos":
         num = float(input("Enter number: "))
         return num, None   
     else:        

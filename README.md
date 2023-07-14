@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/alrz1999/SE-LAB-1/branch/main/graph/badge.svg?token=KS2JGETR2E)](https://codecov.io/gh/alrz1999/SE-LAB-1)
+
 # SE-LAB-1
 
 ## Team members
